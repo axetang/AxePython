@@ -2,12 +2,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 x = np.linspace(0, 10, 100)
-y = np.cos(x)
-z = np.sin(x)
+y1 = np.cos(x)
+y2 = np.sin(x)
 #print(x, "\n", y)
 
-plt.plot(x, y, ls="-", lw=5, label="Plot figure by Axe Tang")
-plt.scatter(x, z, c='b', label='scatterd figure')
+plt.plot(x, y1, ls="-", lw=5, label="Plot figure")
+plt.scatter(x, y2, c='b', label='Scatterd figure')
 plt.legend(loc="upper center")
 plt.show()
 '''
