@@ -6,7 +6,7 @@
 """Match objects.
 """
 
-#end_pymotw_header
+# end_pymotw_header
 import re
 
 pattern = 'this'
@@ -16,6 +16,8 @@ match = re.search(pattern, text)
 
 s = match.start()
 e = match.end()
-
+print(type(match), type(match.span()), match.span())
+print(text[0], text[5], text[8], text[9])
+print(text[s:e])
 print('Found "{}"\nin "{}"\nfrom {} to {} ("{}")'.format(
     match.re.pattern, match.string, s, e, text[s:e]))
