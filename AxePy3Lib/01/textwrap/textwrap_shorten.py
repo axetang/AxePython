@@ -6,7 +6,7 @@
 """
 """
 
-#end_pymotw_header
+# end_pymotw_header
 import textwrap
 from textwrap_example import sample_text
 
@@ -16,6 +16,7 @@ original = textwrap.fill(dedented_text, width=50)
 print('Original:\n')
 print(original)
 
+#shortened = textwrap.shorten(original, 100, placeholder="...")
 shortened = textwrap.shorten(original, 100)
 shortened_wrapped = textwrap.fill(shortened, width=50)
 
