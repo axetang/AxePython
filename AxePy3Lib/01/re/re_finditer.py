@@ -6,13 +6,14 @@
 """Repetition of patterns
 """
 
-#end_pymotw_header
+# end_pymotw_header
 import re
 
 text = 'abbaaabbbbaaaaa'
 
 pattern = 'ab'
-
+matches = re.finditer(pattern, text)
+print(type(matches), matches)
 for match in re.finditer(pattern, text):
     s = match.start()
     e = match.end()

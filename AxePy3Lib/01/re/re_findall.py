@@ -6,12 +6,14 @@
 """Repetition of patterns
 """
 
-#end_pymotw_header
+# end_pymotw_header
 import re
 
 text = 'abbaaabbbbaaaaa'
 
 pattern = 'ab'
-
+matches = re.findall(pattern, text)
+print(type(matches), matches)
 for match in re.findall(pattern, text):
-    print('Found {!r}'.format(match))
+    #print('Found {!r}'.format(match))
+    print('Found {}'.format(match))
