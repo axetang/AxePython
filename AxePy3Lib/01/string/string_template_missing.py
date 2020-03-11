@@ -6,7 +6,7 @@
 """
 """
 
-#end_pymotw_header
+# end_pymotw_header
 import string
 
 values = {'var': 'foo'}
@@ -18,4 +18,6 @@ try:
 except KeyError as err:
     print('ERROR:', str(err))
 
+print('safe_substitute():', t.safe_substitute(values))
+values = {'var': 'foo', 'missing': 'mss'}
 print('safe_substitute():', t.safe_substitute(values))

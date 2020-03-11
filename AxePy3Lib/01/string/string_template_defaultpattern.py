@@ -6,8 +6,10 @@
 """
 """
 
-#end_pymotw_header
+# end_pymotw_header
 import string
 
 t = string.Template('$var')
 print(t.pattern.pattern)
+print(type(t.pattern))
+print(type(t.pattern.pattern))

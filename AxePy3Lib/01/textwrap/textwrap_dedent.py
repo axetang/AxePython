@@ -6,7 +6,7 @@
 """
 """
 
-#end_pymotw_header
+# end_pymotw_header
 import textwrap
 from textwrap_example import sample_text
 
