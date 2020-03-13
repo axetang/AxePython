@@ -6,7 +6,7 @@
 """Looking at groups on a match object
 """
 
-#end_pymotw_header
+# end_pymotw_header
 import re
 
 text = 'This is some text -- with punctuation.'
@@ -27,3 +27,19 @@ for pattern, desc in patterns:
     print("'{}' ({})\n".format(pattern, desc))
     print('  ', match.groups())
     print()
+
+print("my test")
+text = 'This is some texth -- wxith punctuation.'
+pattern = r'(\w+x)(\w+h)'
+regex = re.compile(pattern)
+# 记住：search只能在字符串中搜索一次，找到一个匹配结果
+match = regex.search(text)
+print('  ', match)
+print('  ', type(match.groups()))
+print('  ', match.groups())
+
+for match in re.finditer(pattern, text):
+    s = match.start()
+    e = match.end()
+    print(match.groups())
+    print(match.group(0), match.group(1), match.group(2))

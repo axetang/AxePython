@@ -19,14 +19,20 @@ def test_patterns(text, patterns):
     for pattern, desc in patterns:
         print("'{}' ({})\n".format(pattern, desc))
         print("  '{}'".format(text))
+        # 记住，regex.search()函数只能从字符串中搜索到第一次匹配的结果，不能搜出全部匹配结果
+        # 要使用re.finditer来构造迭代器实现全部match的搜索和处理
+        # pattern中用小括号对来封装正则表达式的子分组，按照左小括号出现顺序来确定match.group()的参数
+        # 可以使用match.groups()和match.group(x)来获取子表达式的匹配结果
+        # regex= re.compile(pattern)
+        # match = regex.search(text)
         for match in re.finditer(pattern, text):
             s = match.start()
             e = match.end()
             substr = text[s:e]
-            # n_backslashes = text[:s].count('\\')
-            # prefix = '.' * (s + n_backslashes)
             prefix = '.'*s
             print("  {}'{}'".format(prefix, substr))
+            # print(match.groups())
+            # print(match.group(0),match.group(1),match.group(2))
         print()
     return
 

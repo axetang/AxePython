@@ -6,7 +6,7 @@
 """Show the groups within the matches for a pattern.
 """
 
-#end_pymotw_header
+# end_pymotw_header
 import re
 
 
@@ -37,3 +37,9 @@ def test_patterns(text, patterns):
                 )
         print()
     return
+
+
+if __name__ == '__main__':
+    patterns = [(r'a((a*)(b*))', 'a followed by 0-n a and 0-n b'),
+                (r'(?P<first>a+)(?P<second>c+)', 'pattern 2'), ]
+    test_patterns('accaaccca', patterns)
